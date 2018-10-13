@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DeepAgri</title>
+        <style>
+            body{
+                background-color: #531a8e;
+                padding:0;
+                margin:0;
+            }
+            .title{
+				width:100%;
+				height:auto;
+                position: absolute;
+                left: 0;
+                top: 0;
+				background-color: white;
+				text-align:center;
+				padding-top:10px;
+				margin:0;
+			}
+            h1,h3,h2{
+				padding-bottom:5px;
+				margin:0;
+				color:green;
+			}
+            .image{
+                width: 200px;
+                height: 200px;
+                background-image: url("{{ image.url }}");
+                background-position: center;
+                position: absolute;
+                top:150px;
+                left:calc(50% - 100px);
+                background-color: #141577;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+            .problem,.solution{
+                height: auto;
+                width:800px;
+                background-color: #8295ff;
+                font-size: 20px;
+                font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+                border-radius: 5px 0px 5px 0px;
+                margin: 10px;
+                position: absolute;
+                top: 400px;
+                left: calc(50% - 400px);
+                padding:10px;
+            }
+            .solution{
+                font-size: 15px;
+                margin: 10px;
+                color:white;
+            }
+            .intro{
+                width:100%;
+                heigh:300px;
+                background-color: #8295ff;
+                display: inline-block;
+            }
+            button{
+                width:100px;
+                height: 40px;
+                border: none;
+                background-color: #141577;
+                border-radius: 5px;
+            }
+            button:hover{
+                background-color: rgba(0,0,255,.5);
+            }
+             .icon{
+                width:90px;
+                height:75px;
+                border-radius: 50%;
+                background-image: url(http://127.0.0.1:8000/media/images/icon.jpg);
+                position: absolute;
+                top:5px;
+                left:500px;
+                background-position: center;
+                background-size: 150px;
+            }
+            ul{
+                list-style-type: square;
+            }
+            u{
+                font-size: 20px;
+                font-family: sans-serif;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            li{
+                margin:10px;
+                font-size: 18px;
+                font-family: "Lucinda Grande", "Lucinda Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="title">
+			<h1>Deep Agri</h1>
+			<h3>Developing forming</h3>
+		</div>
+        <div class="icon"></div>
+        <div class="intro">
+            <div class="image">
+
+            </div>
+        </div>
+        <div class="solution">
+            <ul>
+                <li><u>Disease Name :</u>{{ name }}</li>
+                <li><u>Symptoms :</u>{{ symptoms }}</li>
+                <li><u>Discription :</u>{{ desc }}</li>
+                <li><u>Disease Management :</u>{{ sol }}</li>
+            </ul>
+            <h2>తెలుగులో వినండి.</h2>
+            <audio src={{ audio }} controls></audio>
+        </div>
+    </body>
+
+</html>
